@@ -14,7 +14,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.2.2</app.runtime>
-		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
+		<mule.maven.plugin.version>3.3.6</mule.maven.plugin.version>
 	<munit.version>2.2.1</munit.version>
     </properties>
 
@@ -25,8 +25,22 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
-				<configuration>
-				</configuration>
+			<configuration>	
+			    <cloudHubDeployment>
+			      <uri>https://anypoint.mulesoft.com</uri>
+			      <muleVersion>4.2.2</muleVersion>
+			      <username>chaitu0707</username>
+			      <password>Chaitu@123</password>
+			      <applicationName>mule-demo1</applicationName>
+			      <environment>DEV</environment>
+				  <workerType>MICRO</workerType>
+				  <workers>1</workers>
+				  <objectStoreV2>true</objectStoreV2>>
+			      <properties>
+			        <key>value</key>
+			      </properties>
+			   </cloudHubDeployment>
+</configuration> 
 			</plugin>
 		<plugin>
                 <groupId>com.mulesoft.munit.tools</groupId>
